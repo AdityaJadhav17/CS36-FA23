@@ -26,11 +26,12 @@ This course introduces the **C programming language**, focusing on how to create
 ---
 
 ## 📦 Repo Layout
+
 CS36-FA23/
 ├─ README.md
 ├─ LICENSE
 ├─ .gitignore
-├─ docs/ # Assignment & lab specifications (PDFs)
+├─ docs/ (assignment & lab specifications, PDFs)
 │ ├─ CS36HW1.pdf
 │ ├─ CS36HW2.pdf
 │ ├─ CS36HW3.pdf
@@ -40,12 +41,12 @@ CS36-FA23/
 │ ├─ CS36Lab03.pdf
 │ └─ CS36Lab04.pdf
 ├─ assignments/
-│ ├─ hw01/ 
+│ ├─ hw01/
 │ ├─ hw02/
 │ ├─ hw03/
 │ └─ hw04/
 └─ labs/
-├─ lab01/ 
+├─ lab01/
 ├─ lab02/
 ├─ lab03/
 └─ lab04/
