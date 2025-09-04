@@ -1,8 +1,14 @@
 # CS36 — C Programming
 
+[![License](https://img.shields.io/badge/license-MIT-informational)](./LICENSE)
+[![Made with](https://img.shields.io/badge/made_with-C-blue)]()
+
+---
+
 ## 📖 Course Description
-This course introduces the C programming language, focusing on how to create, execute, and debug C programs.  
-Topics include:
+This course introduces the **C programming language**, focusing on how to create, execute, and debug programs.  
+
+**Topics include:**
 - Input and output statements  
 - Control statements  
 - Random numbers  
@@ -15,79 +21,62 @@ Topics include:
 - Pointers  
 - Linked lists  
 
-**Compiler/IDE:** Code::Blocks (GCC toolchain)
+**Compiler/IDE:** Code::Blocks (GCC toolchain)  
 
 ---
 
 ## 📦 Repo Layout
-CS36/
-
+CS36-FA23/
 ├─ README.md
-
-├─ docs/
-
-│ ├─ HW1.pdf
-
-│ ├─ HW2.pdf
-
-│ ├─ HW3.pdf
-
-│ ├─ HW4.pdf
-
-│ ├─ Lab01.pdf
-
-│ ├─ Lab02.pdf
-
-│ ├─ Lab03.pdf
-
-│ └─ Lab04.pdf
-
+├─ LICENSE
+├─ .gitignore
+├─ docs/ # Assignment & lab specifications (PDFs)
+│ ├─ CS36HW1.pdf
+│ ├─ CS36HW2.pdf
+│ ├─ CS36HW3.pdf
+│ ├─ CS36HW4.pdf
+│ ├─ CS36Lab01.pdf
+│ ├─ CS36Lab02.pdf
+│ ├─ CS36Lab03.pdf
+│ └─ CS36Lab04.pdf
 ├─ assignments/
-
-│ ├─ hw01/
-
-│ │ ├─ README.md
-
-│ │ └─ src/
-
+│ ├─ hw01/ 
 │ ├─ hw02/
-
 │ ├─ hw03/
-
 │ └─ hw04/
-
 └─ labs/
-
-├─ lab01/
-
-│ ├─ README.md
-
-│ ├─ src/ 
-
-│ └─ submissions/ 
-
+├─ lab01/ 
 ├─ lab02/
-
 ├─ lab03/
-
 └─ lab04/
 
 ---
 
 ## 📚 Assignments
-
-- **HW1** — Intro basics (I/O, expressions). No loops/ifs/arrays. Five test runs; strict naming rules.  
-- **HW2** — Decisions & loops. Includes tax-table menu, sentinel loops. No functions/arrays yet.  
-- **HW3** — Functions only. Multiple function prototypes, no arrays/structs/globals.  
-- **HW4** — Arrays, structs, file I/O. Employee database, sorting, text + binary file handling.  
+- [HW1 — Intro Basics](./assignments/hw01/README.md)  
+- [HW2 — Decisions & Loops](./assignments/hw02/README.md)  
+- [HW3 — Functions](./assignments/hw03/README.md)  
+- [HW4 — Arrays, Structs, and Files](./assignments/hw04/README.md)  
 
 ---
 
 ## 🧪 Labs
-
-- **Lab 1** — Early basics; no loops/ifs/arrays. Output formatting practice.  
-- **Lab 2** — Decisions & basic loops. Three runs per question.  
-- **Lab 3** — Functions; prototypes & multiple functions required.  
-- **Lab 4** — Arrays & strings; implement without using built-in string functions for some tasks.  
+- [Lab 1 — Intro Basics](./labs/lab01/README.md)  
+- [Lab 2 — Decisions & Loops](./labs/lab02/README.md)  
+- [Lab 3 — Functions](./labs/lab03/README.md)  
+- [Lab 4 — Arrays & Strings](./labs/lab04/README.md)  
 
 ---
+
+## ⚙️ How to Build & Run (Generic)
+Using GCC:
+```bash
+gcc -std=c11 -Wall -Wextra -O2 -o program src/filename.c
+./program
+Using Code::Blocks:
+
+Create a new project.
+
+Add the .c file(s) from the appropriate src/ folder.
+
+Build → Run (F9). 
