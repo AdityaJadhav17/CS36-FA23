@@ -25,33 +25,43 @@ This course introduces the **C programming language**, focusing on how to create
 
 ---
 
-## 📦 Repo Layout
+# CS36 Repository Layout
 
+```
 CS36-FA23/
-├─ README.md
-├─ LICENSE
-├─ .gitignore
-├─ docs/ (assignment & lab specifications, PDFs)
-│ ├─ CS36HW1.pdf
-│ ├─ CS36HW2.pdf
-│ ├─ CS36HW3.pdf
-│ ├─ CS36HW4.pdf
-│ ├─ CS36Lab01.pdf
-│ ├─ CS36Lab02.pdf
-│ ├─ CS36Lab03.pdf
-│ └─ CS36Lab04.pdf
-├─ assignments/
-│ ├─ hw01/
-│ ├─ hw02/
-│ ├─ hw03/
-│ └─ hw04/
-└─ labs/
-├─ lab01/
-├─ lab02/
-├─ lab03/
-└─ lab04/
+├── README.md
+├── LICENSE
+├── .gitignore
+├── docs/
+│   └── resources/
+├── assignments/
+│   ├── hw01/
+│   │   ├── README.md
+│   │   ├── src/
+│   ├── hw02/
+│   │   ├── README.md
+│   │   ├── src/
+│   ├── hw03/
+│   │   ├── README.md
+│   │   ├── src/
+│   └── hw04/
+│       ├── README.md
+│       ├── src/
+├── labs/
+│   ├── lab01/
+│   │   ├── README.md
+│   │   ├── src/
+│   ├── lab02/
+│   │   ├── README.md
+│   │   ├── src/
+│   ├── lab03/
+│   │   ├── README.md
+│   │   ├── src/
+│   └── lab04/
+│       ├── README.md
+│       ├── src/
 
----
+```
 
 ## 📚 Assignments
 - [HW1 — Intro Basics](./assignments/hw01/README.md)  
