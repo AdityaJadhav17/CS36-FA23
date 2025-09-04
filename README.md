@@ -25,15 +25,11 @@ This course introduces the **C programming language**, focusing on how to create
 
 ---
 
-# CS36 Repository Layout
+## 📦 Repository Layout
 
 ```
 CS36-FA23/
-├── README.md
-├── LICENSE
-├── .gitignore
-├── docs/
-│   └── resources/
+
 ├── assignments/
 │   ├── hw01/
 │   │   ├── README.md
@@ -47,6 +43,8 @@ CS36-FA23/
 │   └── hw04/
 │       ├── README.md
 │       ├── src/
+├── docs/
+│   └── resources/
 ├── labs/
 │   ├── lab01/
 │   │   ├── README.md
@@ -60,6 +58,9 @@ CS36-FA23/
 │   └── lab04/
 │       ├── README.md
 │       ├── src/
+├── .gitignore
+├── LICENSE
+├── README.md
 
 ```
 
