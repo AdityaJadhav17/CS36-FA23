@@ -1,7 +1,5 @@
 # CS36 — C Programming
 
-_Practice repository for course labs & homeworks in C. Built locally with Code::Blocks (GCC)._
-
 ## 📖 Course Description
 This course introduces the C programming language, focusing on how to create, execute, and debug C programs.  
 Topics include:
@@ -24,6 +22,7 @@ Topics include:
 ## 📦 Repo Layout
 CS36/
 ├─ README.md
+
 ├─ docs/ # Assignment & lab specifications (PDFs)
 │ ├─ HW1.pdf
 │ ├─ HW2.pdf
