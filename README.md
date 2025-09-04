@@ -21,35 +21,56 @@ Topics include:
 
 ## 📦 Repo Layout
 CS36/
+
 ├─ README.md
 
-├─ docs/ # Assignment & lab specifications (PDFs)
-│ ├─ HW1.pdf
-│ ├─ HW2.pdf
-│ ├─ HW3.pdf
-│ ├─ HW4.pdf
-│ ├─ Lab01.pdf
-│ ├─ Lab02.pdf
-│ ├─ Lab03.pdf
-│ └─ Lab04.pdf
-├─ assignments/
-│ ├─ hw01/
-│ │ ├─ README.md
-│ │ └─ src/ # drop HW1 .c files here
-│ ├─ hw02/
-│ ├─ hw03/
-│ └─ hw04/
-└─ labs/
-├─ lab01/
-│ ├─ README.md
-│ ├─ src/ # .c source files (from old PC)
-│ └─ submissions/ # .txt files you submitted
-├─ lab02/
-├─ lab03/
-└─ lab04/
+├─ docs/
 
-yaml
-Copy code
+│ ├─ HW1.pdf
+
+│ ├─ HW2.pdf
+
+│ ├─ HW3.pdf
+
+│ ├─ HW4.pdf
+
+│ ├─ Lab01.pdf
+
+│ ├─ Lab02.pdf
+
+│ ├─ Lab03.pdf
+
+│ └─ Lab04.pdf
+
+├─ assignments/
+
+│ ├─ hw01/
+
+│ │ ├─ README.md
+
+│ │ └─ src/
+
+│ ├─ hw02/
+
+│ ├─ hw03/
+
+│ └─ hw04/
+
+└─ labs/
+
+├─ lab01/
+
+│ ├─ README.md
+
+│ ├─ src/ 
+
+│ └─ submissions/ 
+
+├─ lab02/
+
+├─ lab03/
+
+└─ lab04/
 
 ---
 
