@@ -1,0 +1,26 @@
+# Build artifacts
+*.o
+*.obj
+*.exe
+*.out
+*.app
+
+# Code::Blocks project files
+*.cbp
+*.depend
+*.layout
+
+# Backup / temp files
+*~
+*.swp
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# IDE configs
+.vscode/
+.idea/
+
+# Environment files
+*.env
