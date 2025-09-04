@@ -1,0 +1,758 @@
+Lab 2 Question-1
+
+/**********************************************************************/
+/*								      */
+/* Lab 2 Quetsion - 1                                                 */
+/* Student Name: Aditya Jadhav                                        */
+/* Student Id: 1299200                                                */
+/* date : 10/08/2023                                                  */
+/* A program to determine whether the character entered is a vowel    */
+/*(a-e-i-o-u-A-E-I-O-U) or not.                                       */
+/*								      */
+/**********************************************************************/
+
+#include<stdio.h>
+
+int main()
+
+{
+
+    // Declaration
+
+    char alphabet;
+
+    // Data/Input
+
+    printf("Enter any character:");
+    scanf("%c", &alphabet);
+
+    // Processing/Output
+
+    if (alphabet == 'a' || alphabet == 'e' || alphabet == 'i' || alphabet == 'o' || alphabet == 'u')
+        {
+            printf("%c is a vowel\n", alphabet);
+        }
+    else
+        if(alphabet == 'A' || alphabet == 'E' || alphabet == 'I' || alphabet == 'O' || alphabet == 'U')
+        {
+            printf("%c is a vowel\n", alphabet);
+        }
+        else
+        {
+            printf("%c is not a vowel", alphabet);
+        }
+
+    return 0;
+
+}
+
+/*
+
+TEST RUN 1
+Enter any character:h
+h is not a vowel
+
+TEST RUN 2
+Enter any character:i
+i is a vowel
+
+TEST RUN 3
+Enter any character:U
+U is a vowel
+
+*/
+
+Lab 2 Question-2
+
+/**********************************************************************/
+/*								      */
+/* Lab 2 Quetsion - 2                                                 */
+/* Student Name: Aditya Jadhav                                        */
+/* Student Id: 1299200                                                */
+/* Date : 10/08/2023                                                  */
+/* This program should handle the case of determining whether the     */
+/* input is a digit, uppercase letter, or lowercase letter.           */
+/*					            		      */
+/**********************************************************************/
+
+#include<stdio.h>
+
+int main()
+
+{
+
+    //Declaration
+
+    char input;
+
+    //Data/Input
+
+     printf("Enter any character:");
+     scanf("%c", &input);
+
+    //Processing/Output
+
+    if(input >= '0' && input <= '9')
+    {
+        printf("A digit was entered.\n");
+    }
+
+    if(input >= 'A' && input <= 'Z')
+    {
+        printf("Uppercase character was entered.\n");
+    }
+
+    if(input >= 'a' && input <= 'z')
+    {
+        printf("Lowercase character was entered.\n");
+    }
+
+    return 0;
+
+}
+
+/*
+
+TEST RUN 1
+Enter any character:C
+Uppercase character was entered.
+
+TEST RUN 2
+Enter any character:b
+Lowercase character was entered.
+
+TEST RUN 3
+Enter any character:5
+A digit was entered.
+
+*/
+
+Lab 2 Question-3
+
+/**********************************************************************/
+/*     								      */
+/* Lab 2 Quetsion - 3                                                 */
+/* Student Name: Aditya Jadhav                                        */
+/* Student Id: 1299200                                                */
+/* Date : 10/08/2023                                                  */
+/* A program to test whether an integer entered is positive, negative */
+/* or equal to zero.                                                  */
+/*					         		      */
+/**********************************************************************/
+
+#include <stdio.h>
+
+int main()
+
+{
+
+    // Declaration
+
+    int num_1;
+
+    // Data/Input
+
+    printf("Enter any number:");
+    scanf("%d", &num_1);
+
+    // Processing/Output
+
+    if (num_1 == 0)
+        {
+            printf("The number is equal to zero\n");
+        }
+
+    else
+        if (num_1 > 0)
+            {
+                printf("The number is positive\n");
+            }
+
+    else
+        {
+                printf("The number is negative\n");
+        }
+
+    return 0;
+
+}
+
+/*
+
+TEST RUN 1
+Enter any number:0
+The number is equal to zero
+
+TEST RUN 2
+Enter any number:15
+The number is positive
+
+TEST RUN 3
+Enter any number:-25
+The number is negative
+
+*/
+
+Lab 2 Question-4
+
+/**********************************************************************/
+/*								      */
+/* Lab 2 Quetsion - 4                                                 */
+/* Student Name: Aditya Jadhav                                        */
+/* Student Id: 1299200                                                */
+/* Date : 10/08/2023                                                  */
+/* Program using switch statement to determine whether the entered    */
+/* character is a vowel or not.                                       */
+/*								      */
+/**********************************************************************/
+
+#include<stdio.h>
+
+int main()
+
+{
+
+    //Declaration
+
+    char alphabet;
+
+    //Data/Input
+
+    printf("Enter a character:");
+    scanf ("%c", &alphabet);
+
+    //Processing/Output
+
+    switch(alphabet)
+    {
+       case 'a':
+       case 'e':
+       case 'i':
+       case 'o':
+       case 'u':
+       case 'A':
+       case 'E':
+       case 'I':
+       case 'O':
+       case 'U': printf("%c is a vowel", alphabet);
+               break;
+       default: printf("%c is not a vowel", alphabet);
+
+    }
+
+    return 0;
+
+}
+
+/*
+
+TEST RUN 1
+Enter a character:b
+b is not a vowel
+
+TEST RUN 2
+Enter a character:B
+B is not a vowel
+
+TEST RUN 3
+Enter a character:e
+e is a vowel
+
+*/
+
+Lab 2 Question-5
+
+/**********************************************************************/
+/*								      */
+/* Lab 2 Quetsion - 5                                                 */
+/* Student Name: Aditya Jadhav                                        */
+/* Student Id: 1299200                                                */
+/* Date : 10/08/2023                                                  */
+/* A program that accepts a number from 1 to 10. Prints whether the   */
+/* number is even or odd using a switch case construct. If the number */
+/* entered is not between 1 to 10 displays "Number entered is outside */
+/* range".                                                            */
+/*								      */
+/**********************************************************************/
+
+#include<stdio.h>
+
+int main()
+
+{
+
+    //Declaration
+
+    int num_1;
+
+    //Data/Input
+
+    printf("Enter a number between 1 to 10:");
+    scanf ("%d", &num_1);
+
+    //Processing/Output
+
+    switch(num_1)
+    {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 9: printf("You entered %d. That is an odd number\n", num_1);
+            break;
+    case 2:
+    case 4:
+    case 6:
+    case 8:
+    case 10: printf("You entered %d. That is an even number\n", num_1);
+            break;
+    default: printf("Number entered is out of range.\n");
+
+    }
+
+    return 0;
+
+}
+
+/*
+
+TEST RUN 1
+Enter a number between 1 to 10:5
+You entered 5. That is an odd number
+
+TEST RUN 2
+Enter a number between 1 to 10:12
+Number entered is out of range.
+
+TEST RUN 3
+Enter a number between 1 to 10:8
+You entered 8. That is an even number
+
+*/
+
+Lab 2 Question-6
+
+/**********************************************************************/
+/*								      */
+/* Lab 2 Quetsion - 6                                                 */
+/* Student Name: Aditya Jadhav                                        */
+/* Student Id: 1299200                                                */
+/* Date : 10/08/2023                                                  */
+/* A program to read the numbers until -1 is encountered. Also,       */
+/* count the negative, positive, and zeroes entered by the user.      */
+/* The -1 will not be counted since it is a flag or sentinel.         */
+/*								      */
+/**********************************************************************/
+
+#include<stdio.h>
+
+int main()
+
+{
+
+    //Declaration
+
+    int num_1;
+    int positive;
+    int negative;
+    int zero;
+
+    //Data/Input
+
+     printf("Enter any number , -1 to quit : ");
+     scanf ("%d", &num_1);
+
+    //Processing/Output
+
+    positive = 0;
+    negative = 0;
+    zero = 0;
+
+    while(num_1 != -1)
+    {
+
+       if(num_1 > 0)
+       {
+           positive++;
+       }
+       else
+           if(num_1 < 0)
+            {
+                negative++;
+            }
+        else
+            {
+                zero++;
+            }
+
+            printf("Enter any number , -1 to quit : ");
+            scanf ("%d", &num_1);
+
+    }
+
+    puts("");
+    printf("Count of positive numbers entered = %d\n", positive);
+    printf("Count of negative numbers entered = %d\n", negative);
+    printf("Count of zeroes numbers entered = %d\n", zero);
+
+    return 0;
+
+}
+
+/*
+
+TEST RUN 1
+Enter any number , -1 to quit : -12
+Enter any number , -1 to quit : 108
+Enter any number , -1 to quit : -24
+Enter any number , -1 to quit : 0
+Enter any number , -1 to quit : -23
+Enter any number , -1 to quit : -1
+
+Count of positive numbers entered = 1
+Count of negative numbers entered = 3
+Count of zeroes numbers entered = 1
+
+TEST RUN 2
+Enter any number , -1 to quit : 8
+Enter any number , -1 to quit : -4
+Enter any number , -1 to quit : -7
+Enter any number , -1 to quit : -9
+Enter any number , -1 to quit : 23
+Enter any number , -1 to quit : 0
+Enter any number , -1 to quit : 0
+Enter any number , -1 to quit : -1
+
+Count of positive numbers entered = 2
+Count of negative numbers entered = 3
+Count of zeroes numbers entered = 2
+
+TEST RUN 3
+Enter any number , -1 to quit : -9
+Enter any number , -1 to quit : 0
+Enter any number , -1 to quit : 0
+Enter any number , -1 to quit : 4
+Enter any number , -1 to quit : 8
+Enter any number , -1 to quit : 9
+Enter any number , -1 to quit : -23
+Enter any number , -1 to quit : 69
+Enter any number , -1 to quit : -1
+
+Count of positive numbers entered = 4
+Count of negative numbers entered = 2
+Count of zeroes numbers entered = 2
+
+*/
+
+Lab 2 Question-7
+
+/**********************************************************************/
+/*								      */
+/* Lab 2 Quetsion - 7                                                 */
+/* Student Name: Aditya Jadhav                                        */
+/* Student Id: 1299200                                                */
+/* Date : 10/08/2023                                                  */
+/* A program to calculate the sum of numbers from m to n. For example,*/
+/* if use enters m = 7 and n = 11, your program will                  */
+/* calculate 7 + 8 + 9 + 10 + 11 = 45.                                */
+/*								      */
+/**********************************************************************/
+
+#include<stdio.h>
+
+int main()
+
+{
+
+    //Declaration
+
+    int num_1;
+    int num_2;
+    int sum = 0;
+
+    //Data/Input
+
+    printf("Enter the value of m : ");
+    scanf ("%d", &num_1);
+    printf("Enter the value of n : ");
+    scanf ("%d", &num_2);
+
+    //Processing/Output
+
+    while(num_1 <= num_2)
+    {
+
+        sum += num_1;
+        num_1++;
+
+    }
+
+    printf("Sum = %d\n", sum);
+
+    return 0;
+}
+
+/*
+
+TEST RUN 1
+Enter the value of m : 7
+Enter the value of n : 11
+Sum = 45
+
+TEST RUN 2
+Enter the value of m : 7
+Enter the value of n : 9
+Sum = 24
+
+TEST RUN 3
+Enter the value of m : 4
+Enter the value of n : 10
+Sum = 49
+
+*/
+
+Lab 2 Question-8
+
+/**********************************************************************/
+/*								      */
+/* Lab 2 Quetsion - 8                                                 */
+/* Student Name: Aditya Jadhav                                        */
+/* Student Id: 1299200                                                */
+/* Date : 10/08/2023                                                  */
+/* A program using a do-while loop to display the square and cube of  */
+/* first n natural numbers.                                           */
+/*								      */
+/**********************************************************************/
+
+#include<stdio.h>
+
+int main ()
+
+{
+
+    //Declaration
+
+    int num;
+    int square;
+    int cube;
+    int num_1;
+
+    //Data/Input
+
+    printf("Enter the value of n : ");
+    scanf ("%d", &num);
+    puts("");
+    printf("-----------------------------------------------\n");
+
+    //Processing/Output
+
+	square = 0;
+	cube = 0;
+	num_1 = 1;
+    do
+    {
+
+      square = num_1 * num_1;
+      cube   = num_1 * num_1 * num_1;
+      printf("|       %-4d   |       %-4d    |      %-4d    |\n", num_1, square, cube);
+      num_1++;
+
+    }
+    while (num_1 <= num);
+
+     printf("-----------------------------------------------\n");
+
+	return 0;
+
+}
+
+/*
+
+TEST RUN 1
+Enter the value of n : 5
+
+-----------------------------------------------
+|       1      |       1       |      1       |
+|       2      |       4       |      8       |
+|       3      |       9       |      27      |
+|       4      |       16      |      64      |
+|       5      |       25      |      125     |
+-----------------------------------------------
+
+TEST RUN 2
+Enter the value of n : 6
+
+-----------------------------------------------
+|       1      |       1       |      1       |
+|       2      |       4       |      8       |
+|       3      |       9       |      27      |
+|       4      |       16      |      64      |
+|       5      |       25      |      125     |
+|       6      |       36      |      216     |
+-----------------------------------------------
+
+TEST RUN 3
+Enter the value of n : 4
+
+-----------------------------------------------
+|       1      |       1       |      1       |
+|       2      |       4       |      8       |
+|       3      |       9       |      27      |
+|       4      |       16      |      64      |
+-----------------------------------------------
+
+*/
+
+Lab 2 Question-9
+
+/**********************************************************************/
+/*								      */
+/* Lab 2 Quetsion - 9                                                 */
+/* Student Name: Aditya Jadhav                                        */
+/* Student Id: 1299200                                                */
+/* Date : 10/08/2023                                                  */
+/* A program to print a pattern of a right angled triangle. Base is   */
+/* any integer.                                                       */
+/*								      */
+/**********************************************************************/
+
+#include<stdio.h>
+
+int main()
+
+{
+
+    //Declaration
+
+    int base_size;
+
+    //Data/Input
+
+    printf("Enter base size of triangle for pattern : ");
+    scanf("%d", &base_size);
+    puts("");
+
+    //Processing/output
+
+    for(int i = 1; i <= base_size; i++)
+    {
+        for(int j = 1; j < (i + 1) ; j++)
+        printf("%d", j);
+        puts("");
+    }
+
+    return 0;
+
+}
+
+/*
+
+TEST RUN 1
+Enter base size of triangle for pattern : 5
+
+1
+12
+123
+1234
+12345
+
+TEST RUN 2
+Enter base size of triangle for pattern : 6
+
+1
+12
+123
+1234
+12345
+123456
+
+TEST RUN 3
+Enter base size of triangle for pattern : 4
+
+1
+12
+123
+1234
+
+*/
+
+Lab 2 Question-10
+
+/**********************************************************************/
+/*							              */
+/* Lab 2 Quetsion - 10                                                */
+/* Student Name: Aditya Jadhav                                        */
+/* Student Id: 1299200                                                */
+/* Date : 10/08/2023                                                  */
+/* A program to print a pattern of a right angled triangle. Base is   */
+/* any uppercase alphabet.                                            */
+/*								      */
+/**********************************************************************/
+
+#include<stdio.h>
+
+int main()
+
+{
+
+   //Declaration
+
+   char uppercase;
+   char alphabet;
+   int  rows;
+
+   // Data/Input
+
+    printf("Enter highest alphabet: ");
+    scanf(" %c", &uppercase);
+
+    // Processing/Output
+
+    rows = uppercase - 'A' + 1;
+    alphabet = 'A';
+
+    for (int i = 0; i < rows; i++)
+        {
+            alphabet = 'A';
+
+        for (int j = 0; j <= i; j++)
+            {
+                printf("%c",alphabet);
+                alphabet++;
+            }
+               puts("");
+        }
+
+    return 0;
+
+}
+
+/*
+
+TEST RUN 1
+Enter highest alphabet: F
+A
+AB
+ABC
+ABCD
+ABCDE
+ABCDEF
+
+TEST RUN 2
+Enter highest alphabet: G
+A
+AB
+ABC
+ABCD
+ABCDE
+ABCDEF
+ABCDEFG
+
+TEST RUN 3
+Enter highest alphabet: D
+A
+AB
+ABC
+ABCD
+
+*/

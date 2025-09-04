@@ -1,0 +1,713 @@
+//Lab 4 Question-1
+
+/**********************************************************************/
+/*								      */
+/* Lab 4 Quetsion - 1                                                 */
+/* Student Name: Aditya Jadhav                                        */
+/* Student Id: 1299200                                                */
+/* Date : 12/06/2023                                                  */
+/* A program to interchange the largest and the smallest number in    */
+/* an array.                                                          */
+/*								      */
+/**********************************************************************/
+
+#include<stdio.h>
+
+//Function Prototypes
+
+void read_array(int arr[], int size);
+void display_array(int arr[], int size);
+void interchange_largest_smallest(int arr[], int size);
+
+int main()
+{
+    //Declaration
+
+    int size;
+
+    //Data Input
+
+    printf("Enter the desired size of the array: ");
+    scanf ("%d", &size);
+
+    int arr[size];
+
+    read_array(arr, size);
+
+    //Output
+
+    printf("\nThe elements of the array are:\n");
+    display_array(arr, size);
+
+    interchange_largest_smallest(arr, size);
+
+    printf("\nThe elements of the array after the interchange are:\n");
+    display_array(arr, size);
+
+    return 0;
+
+}
+
+
+void read_array(int arr[], int size)
+{
+    for(int i=0; i<size; i++)
+    {
+        printf("Enter a number for position %d:", i);
+        scanf("%d", &arr[i]);
+    }
+}
+
+
+void display_array(int arr[], int size)
+{
+    for (int i=0; i < size; i++)
+    {
+        printf("arr[%d]=%d ", i, arr[i]);
+    }
+   puts("");
+}
+
+
+void interchange_largest_smallest(int arr[], int size)
+{
+
+    int max_Index = 0;
+
+    for (int i = 1; i < size; i++)
+    {
+        if (arr[i] > arr[max_Index])
+        {
+            max_Index = i;
+        }
+    }
+
+    int min_Index = 0;
+
+    for (int i = 1; i < size; i++)
+    {
+        if (arr[i] < arr[min_Index])
+        {
+            min_Index = i;
+        }
+    }
+
+    int temp = arr[max_Index];
+    arr[max_Index] = arr[min_Index];
+    arr[min_Index] = temp;
+
+}
+/*
+TEST RUN 1
+Enter the desired size of the array: 5
+Enter a number for position 0:3
+Enter a number for position 1:6
+Enter a number for position 2:3
+Enter a number for position 3:7
+Enter a number for position 4:9
+
+The elements of the array are:
+arr[0]=3 arr[1]=6 arr[2]=3 arr[3]=7 arr[4]=9
+
+The elements of the array after the interchange are:
+arr[0]=9 arr[1]=6 arr[2]=3 arr[3]=7 arr[4]=3
+
+TEST RUN 2
+Enter the desired size of the array: 4
+Enter a number for position 0:3
+Enter a number for position 1:6
+Enter a number for position 2:8
+Enter a number for position 3:9
+
+The elements of the array are:
+arr[0]=3 arr[1]=6 arr[2]=8 arr[3]=9
+
+The elements of the array after the interchange are:
+arr[0]=9 arr[1]=6 arr[2]=8 arr[3]=3
+
+TEST RUN 3
+Enter the desired size of the array: 3
+Enter a number for position 0:3
+Enter a number for position 1:4
+Enter a number for position 2:8
+
+The elements of the array are:
+arr[0]=3 arr[1]=4 arr[2]=8
+
+The elements of the array after the interchange are:
+arr[0]=8 arr[1]=4 arr[2]=3
+*/
+
+//Lab 4 Question-2
+
+/**********************************************************************/
+/*								      */
+/* Lab 4 Quetsion - 2                                                 */
+/* Student Name: Aditya Jadhav                                        */
+/* Student Id: 1299200                                                */
+/* Date : 12/06/2023                                                  */
+/* A program to find the second largest integer number using an array */
+/* of numbers.                                                        */
+/*								      */
+/**********************************************************************/
+
+#include<stdio.h>
+
+// Function prototypes
+
+void read_array(int arr[], int size);
+void display_array(int arr[], int size);
+int find_second_largest(int arr[], int size);
+
+int main()
+{
+    //Declaration
+
+    int size;
+
+    //Data Input
+
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &size);
+    puts ("");
+
+    int arr[size];
+
+    //Output
+
+    read_array(arr, size);
+
+    printf("\nThe numbers you entered are: ");
+    display_array(arr, size);
+
+    int largest = arr[0];
+
+    for (int i = 1; i < size; i++)
+    {
+        if (arr[i] > largest)
+        {
+            largest = arr[i];
+        }
+    }
+
+    int secondLargest = find_second_largest(arr, size);
+
+    printf("The largest of these numbers is: %d\n", largest);
+    printf("The second largest of these numbers is: %d\n", secondLargest);
+
+    return 0;
+}
+
+
+void read_array(int arr[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        printf("Enter the number: ");
+        scanf("%d", &arr[i]);
+    }
+}
+
+
+void display_array(int arr[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    puts("");
+}
+
+
+int find_second_largest(int arr[], int size)
+{
+    int largest = arr[0];
+    int secondLargest = arr[0];
+
+    for (int i = 1; i < size; i++)
+    {
+        if (arr[i] > largest)
+        {
+            secondLargest = largest;
+            largest = arr[i];
+        }
+        else if (arr[i] > secondLargest && arr[i] != largest)
+        {
+            secondLargest = arr[i];
+        }
+    }
+
+    return secondLargest;
+}
+/*
+TEST RUN 1
+Enter the number of elements in the array: 6
+
+Enter the number: 10
+Enter the number: 35
+Enter the number: 60
+Enter the number: 34
+Enter the number: 20
+Enter the number: 46
+
+The numbers you entered are: 10 35 60 34 20 46
+The largest of these numbers is: 60
+The second largest of these numbers is: 46
+
+TEST RUN 2
+Enter the number of elements in the array: 4
+
+Enter the number: 4
+Enter the number: 8
+Enter the number: 7
+Enter the number: 3
+
+The numbers you entered are: 4 8 7 3
+The largest of these numbers is: 8
+The second largest of these numbers is: 7
+
+TEST RUN 3
+Enter the number of elements in the array: 3
+
+Enter the number: 4
+Enter the number: 9
+Enter the number: 6
+
+The numbers you entered are: 4 9 6
+The largest of these numbers is: 9
+The second largest of these numbers is: 6
+*/
+
+//Lab 4 Question-3
+
+/**********************************************************************/
+/*								      */
+/* Lab 4 Quetsion - 3                                                 */
+/* Student Name: Aditya Jadhav                                        */
+/* Student Id: 1299200                                                */
+/* Date : 12/06/2023                                                  */
+/* A program to find whether the array of integers contain a duplicate*/
+/* number.                                                            */
+/*								      */
+/**********************************************************************/
+
+#include <stdio.h>
+
+// Function prototypes
+
+void read_array(int arr[], int size);
+void display_array(int arr[], int size);
+void find_and_display_duplicate(int arr[], int size);
+
+int main()
+{
+    //Declaration
+
+    int size;
+
+    // Data/Input
+
+    printf("Enter the size of the array:");
+    scanf("%d", &size);
+
+    int arr[size];
+
+    read_array(arr, size);
+
+    // Output
+
+    printf("\nThe numbers you entered are: ");
+
+    display_array(arr, size);
+
+    find_and_display_duplicate(arr, size);
+
+    return 0;
+}
+
+
+void read_array(int arr[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        printf("");
+        scanf("%d", &arr[i]);
+    }
+}
+
+
+void display_array(int arr[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+
+void find_and_display_duplicate(int arr[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = i + 1; j < size; j++)
+        {
+            if (arr[i] == arr[j])
+            {
+                printf("Duplicate number %d found at location %d and %d\n", arr[i], i, j);
+
+            }
+        }
+    }
+}
+/*
+TEST RUN 1
+Enter the size of the array:6
+1
+2
+3
+3
+4
+5
+
+The numbers you entered are: 1 2 3 3 4 5
+Duplicate number 3 found at location 2 and 3
+
+TEST RUN 2
+Enter the size of the array:5
+5
+6
+7
+8
+5
+
+The numbers you entered are: 5 6 7 8 5
+Duplicate number 5 found at location 0 and 4
+
+TEST RUN 3
+Enter the size of the array:4
+5
+6
+4
+4
+
+The numbers you entered are: 5 6 4 4
+Duplicate number 4 found at location 2 and 3
+*/
+
+//Lab 4 Question-4
+
+/**********************************************************************/
+/*								      */
+/* Lab 4 Quetsion - 4                                                 */
+/* Student Name: Aditya Jadhav                                        */
+/* Student Id: 1299200                                                */
+/* Date : 12/06/2023                                                  */
+/* A program to read and print the text until a "*" is encountered.   */
+/* Also, counts the number of characters in the text entered.         */	
+/*								      */
+/**********************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    //Declaration
+
+    char text[100];
+    char ch;
+    int count = 0;
+    int end_Reached = 0;
+
+    //Data Input
+
+    printf("Enter * to end\n");
+    printf("Enter the text : ");
+
+    //Processing
+
+    while (!end_Reached)
+        {
+
+        scanf("%c", &ch);
+
+        if (ch == '*')
+        {
+            end_Reached = 1;
+        }
+        else
+        {
+            text[count++] = ch;
+        }
+    }
+
+    text[count] = '\0';
+
+    //Output
+
+    printf("The text is : %s\n", text);
+    printf("The count of the characters is : %d\n", count);
+
+    return 0;
+}
+/*
+TEST RUN 1
+Enter * to end
+Enter the text : Hi there*
+The text is : Hi there
+The count of the characters is : 8
+
+TEST RUN 2
+Enter * to end
+Enter the text : How are you*
+The text is : How are you
+The count of the characters is : 11
+
+TEST RUN 3
+Enter * to end
+Enter the text : I am fine*
+The text is : I am fine
+The count of the characters is : 9
+*/
+
+//Lab 4 Question-5
+
+/**********************************************************************/
+/*								      */
+/* Lab 4 Quetsion - 5                                                 */
+/* Student Name: Aditya Jadhav                                        */
+/* Student Id: 1299200                                                */
+/* Date : 12/06/2023                                                  */
+/* A program to read a sentence which is a single string. Then counts */
+/* the number of words in the sentence. The program will read in a    */
+/* string not one character at a time.                                */
+/*								      */
+/**********************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    //Declaration
+
+    char sentence[1000];
+    int count = 0;
+    int i = 0;
+    char ch;
+
+    //Data/Input
+
+    printf("Enter the sentence : ");
+
+    //Processing
+
+    while ((ch = getchar()) != '\n' && i < 999)
+    {
+        sentence[i++] = ch;
+    }
+
+    sentence[i] = '\0';
+
+
+    for (int j = 0; sentence[j] != '\0'; j++)
+    {
+        if (sentence[j] == ' ')
+        {
+            count++;
+        }
+    }
+
+    if (sentence[i - 1] != ' ')
+    {
+        count++;
+    }
+
+    //Output
+
+    printf("The total count of words is : %d\n", count);
+
+    return 0;
+}
+/*
+TEST RUN 1
+Enter the sentence : How are you
+The total count of words is : 3
+
+TEST RUN 2
+Enter the sentence : I'm fine
+The total count of words is : 2
+
+TEST RUN 3
+Enter the sentence : Are you free this weekend
+The total count of words is : 5
+*/
+
+//Lab 4 Question-6
+
+/**********************************************************************/
+/*								      */
+/* Lab 4 Quetsion - 6                                                 */
+/* Student Name: Aditya Jadhav                                        */
+/* Student Id: 1299200                                                */
+/* Date : 12/06/2023                                                  */
+/* A program to enter a text that has commas. Replace all the commas  */
+/* with semi colons and then display the new text with semi colons.   */
+/* This program will allow the user to enter a string not a character */
+/* at a time.                                                         */
+/*								      */
+/**********************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    //Declaration
+
+    char text[1000];
+
+    //Data Input
+
+    printf("Enter the text : ");
+    gets(text);
+
+   //Processing
+
+    for (int i = 0; text[i] != '\0'; i++)
+    {
+        if (text[i] == ',')
+        {
+            text[i] = ';';
+        }
+    }
+
+    //Output
+
+    printf("The copied text is : %s\n", text);
+
+    return 0;
+}
+/*
+TEST RUN 1
+Enter the text : Hello, how are you
+The copied text is : Hello; how are you
+
+TEST RUN 2
+Enter the text : Excuse me, wrong number
+The copied text is : Excuse me; wrong number
+
+TEST RUN 3
+Enter the text : Oh, I'm sorry have a nice day
+The copied text is : Oh; I'm sorry have a nice day
+*/
+
+//Lab 4 Question-7
+
+/**********************************************************************/
+/*								      */
+/* Lab 4 Quetsion - 7                                                 */
+/* Student Name: Aditya Jadhav                                        */
+/* Student Id: 1299200                                                */
+/* Date : 12/06/2023                                                  */
+/* A program to enter a text. Then enter a pattern and count the      */
+/* number of times the pattern is repeated in the text. This program  */
+/* will read in a string not a character at a time.                   */
+/*								      */
+/**********************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    //Declaration
+
+    char text[1000];
+    char pattern[100];
+    int count = 0;
+    int i = 0;
+    char ch;
+
+    //Data/Input
+
+    printf("Enter string: ");
+
+    //Processing
+
+    while ((ch = getchar()) != '\n' && i < 999)
+    {
+        text[i++] = ch;
+    }
+    text[i] = '\0';
+
+    printf("Enter the pattern: ");
+
+    i = 0;
+
+    while ((ch = getchar()) != '\n' && i < 99)
+    {
+        pattern[i++] = ch;
+    }
+    pattern[i] = '\0';
+
+    int j = 0;
+
+    while (text[j] != '\0')
+    {
+
+        int match = 1;
+
+        int k = 0;
+
+        while (pattern[k] != '\0')
+        {
+            if (text[j + k] != pattern[k])
+            {
+                match = 0;
+            }
+
+            k++;
+        }
+
+        if (match)
+        {
+            count++;
+            j += k;
+        }
+        else
+        {
+            j++;
+        }
+    }
+
+    // Output
+
+    if (count > 0)
+    {
+        printf("\nPattern found %d times\n", count);
+    }
+    else
+    {
+        printf("\nPattern not found\n");
+    }
+
+    return 0;
+}
+/*
+TEST RUN 1
+Enter string : She sells sea shells on the sea shore
+Enter the pattern : sea
+
+Pattern found 2 times
+
+TEST RUN 2
+Enter string : I love One Piece!
+Enter the pattern : Aditya
+
+Pattern not found
+
+TEST RUN 3
+Enter string : Luffy will become King of the Pirates!
+Enter the pattern : Luffy
+
+Pattern found 1 times
+*/
+
